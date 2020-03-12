@@ -32,8 +32,6 @@ Implementing Serveral Networks in [**pytorch**](https://pytorch.org) with studyi
     <img src="./imgs/DCGAN.png" width="400"\>
 </p>
 
-<br></br>
-
 - The Main Idea is embedding CNN into the VanilaGAN
 - [[**Paper**]](https://arxiv.org/abs/1511.06434) | [[**Code**]](./Implementations/GANs/DCGAN/DCGAN.ipynb)
 <p align="center">
