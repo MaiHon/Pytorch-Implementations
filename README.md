@@ -29,7 +29,7 @@ Implementing Serveral Networks in [**pytorch**](https://pytorch.org) with studyi
 - Authors 
   - [Alec Radford | Luke Metz | Soumith Chintala]
 <p align="center">
-    <img src="./imgs/DCGAN.png" width="400"\>
+    <img src="./imgs/DCGAN.png" width="400" height="250"\>
 </p>
 
 - The Main Idea is embedding CNN into the VanilaGAN
