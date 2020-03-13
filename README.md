@@ -6,12 +6,12 @@
 Implementing Serveral Networks in [**pytorch**](https://pytorch.org) with studying it each papers. Welcome any advice with widely open arms.
 
 <br></br>
-<br></br>
 
 [**Implementations**](#Implementations)
  + [GANs](#Gans)
    + [VanilaGAN](#vanilagan)
    + [DCGAN](#dcgan)
+   + [LSGAN](#lsgan)
 
 <br></br>
 
@@ -36,4 +36,26 @@ Implementing Serveral Networks in [**pytorch**](https://pytorch.org) with studyi
 - [[**Paper**]](https://arxiv.org/abs/1511.06434) | [[**Code**]](./Implementations/GANs/DCGAN/DCGAN.ipynb)
 <p align="center">
     <img src='./gifs/DCGAN.gif' width="360"\>
+</p>
+
+#### LSGAN
+- Least Squares Generative Adversarial Networks
+- Authors 
+  - [Xudong Mao | Qing Li | Haoran Xie | Raymond Y.K. Lau | Zhen Wang | Stephen Paul Smolley]
+<p align="center">
+    <t align="center">
+        The VanilaGAN Loss Function
+    </t>
+    <img src="./imgs/LSGAN_2.png" width="400"\>
+    <br>
+    <t align="center">
+        The VanilaGAN Loss Function
+    </t>
+    <img src="./imgs/LSGAN_1.png" width="400"\>
+</p>
+
+- The authors claim that VanilaGAN is UNSTABLE cause of the loss function. Breifly, minimizing the objective function of it suffers from vanishing gradients and it ends up with being hard to train the generator. To Resolve this problem, the authors argue **"The least squares loss function will penalize the fake samples and pull them toward the decision boundary even though they are correctly classfied. Based on this porperty, LSGANs are able to generate samples that are closer to real data."**
+- [[**Paper**]](https://arxiv.org/abs/1611.04076) | [[**Code**]](./Implementations/GANs/LSGAN/LSGAN.ipynb)
+<p align="center">
+    <img src='./gifs/LSGAN.gif' width="360"\>
 </p>
