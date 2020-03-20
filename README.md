@@ -27,6 +27,8 @@ Implementing Serveral Networks in [**pytorch**](https://pytorch.org) with studyi
    + [cGAN](#cgan)
    + [LSGAN](#lsgan)
    + [SRGAN](#srgan)
+   + [WGAN](#wgan)
+   + [WGAN-GP](#wgan-gp)
 
 <br></br>
 
@@ -39,6 +41,8 @@ Implementing Serveral Networks in [**pytorch**](https://pytorch.org) with studyi
 <p align="center">
     <img src='./gifs/VanilaGAN.gif' width="360"\>
 </p>
+<br></br>
+
 
 #### DCGAN
 - Deep Convolutional Generative Adversarial Networks
@@ -54,6 +58,7 @@ Implementing Serveral Networks in [**pytorch**](https://pytorch.org) with studyi
 <p align="center">
     <img src='./gifs/DCGAN.gif' width="360"\>
 </p>
+<br></br>
 
 
 #### cGAN
@@ -65,11 +70,11 @@ Implementing Serveral Networks in [**pytorch**](https://pytorch.org) with studyi
 <p align="center">
     <p align="center">
         <font size="3.5">
-          The cGAN's scheme
+          [The cGAN's scheme]
         </font>
     </p>
     <p align="center">
-    <img src="./imgs/cGAN.png" width="500" height="350"\>
+    <img src="./imgs/cGAN.PNG" width="500" height="350"\>
     </p>
 </p>
 
@@ -82,6 +87,7 @@ Implementing Serveral Networks in [**pytorch**](https://pytorch.org) with studyi
         <img src='./gifs/cGAN.gif' width="360"\>
     </p>
 </p>
+<br></br>
 
 
 #### LSGAN
@@ -92,7 +98,7 @@ Implementing Serveral Networks in [**pytorch**](https://pytorch.org) with studyi
 <p align="center">
     <p align="center">
         <font size="3.5">
-          The VanilaGANs Loss Function
+          [The VanilaGANs Loss Function]
         </font>
     </p>
     <p align="center">
@@ -100,7 +106,7 @@ Implementing Serveral Networks in [**pytorch**](https://pytorch.org) with studyi
     </p>
     <p align="center">
         <font size="3.5">
-        The LSGANs Loss Function
+        [The LSGANs Loss Function]
         </font>
     </p>
     <p align="center">
@@ -113,7 +119,7 @@ Implementing Serveral Networks in [**pytorch**](https://pytorch.org) with studyi
 <p align="center">
     <img src='./gifs/LSGAN.gif' width="360"\>
 </p>
-
+<br></br>
 
 
 #### SRGAN
@@ -125,7 +131,7 @@ Implementing Serveral Networks in [**pytorch**](https://pytorch.org) with studyi
 <p align="center">
     <p align="center">
         <font size="3.5">
-          The SRGAN's scheme
+          [The SRGAN's scheme]
         </font>
     </p>
     <p align="center">
@@ -146,4 +152,62 @@ Implementing Serveral Networks in [**pytorch**](https://pytorch.org) with studyi
     <p align="center">
         <img src='./gifs/SRGAN_CelebA.gif' width="360"\>
     </p>
+</p>
+<br></br>
+
+
+#### WGAN
+- Wasserstein Generative Adversarial Networks
+- Authors 
+  - [Martin Arjovsky | Soumith Chintala | Léon Bottou]
+  <br></br>
+<p align="center">
+    <p align="center">
+        <font size="3.5">
+          [The Wasserstein Loss]
+        </font>
+    </p>
+    <p align="center">
+    <img src="./imgs/WGAN_1.png" width="400"\>
+    </p>
+    <p align="center">
+        <font size="3.5">
+          [Wasserstein GAN Training Algorithm]
+        </font>
+    </p>
+    <p align="center">
+    <img src="./imgs/WGAN_2.png" width="400"\>
+    </p>
+</p>
+
+- The authors shows that <font color="red" size="3.5"> **the Earth-Mover(EM) distance** </font> might have nice properties somehow when optimized than JS (Jensen-Shannon Divergence) through Theorem 2. 
+
+- [[**Paper**]](https://arxiv.org/abs/1701.07875) | [[**Code**]](./Implementations/GANs/WGAN/WGAN.ipynb)
+<p align="center">
+    <img src='./gifs/WGAN.gif' width="360"\>
+</p>
+<br></br>
+
+#### WGAN-GP
+- Wasserstein Generative Adversarial Networks with Gradient Penalty
+- Authors 
+  - [Ishaan Gulrajani | Faruk Ahmed | Martin Arjovsky | Vincent Dumoulin | Aaron Courville]
+  <br></br>
+<p align="center">
+    <p align="center">
+        <font size="3.5">
+          [The WGAN-GP's Training Algorithm]
+        </font>
+    </p>
+    <p align="center">
+      <img src="./imgs/WGAN-GP.png" width="400"\>
+    </p>
+</p>
+
+- The authors claim that WGAN made a great progress toward stable training of GANs, but sometimes cna still generate only poor samples or fail to converge and <font color="yellow" size="3.5"> **it is often due to the use of clipping in WGAN. So they proposed a penalizing the norm of gradient fo the critic w.r.t to its input.** </font> 
+- <font color='blue'> **The only difference to original WGAN is using gradient penalty instead of clipping the weights of critic.** </font>
+
+- [[**Paper**]](https://arxiv.org/abs/1704.00028) | [[**Code**]](./Implementations/GANs/WGAN-GP/WGAN-GP.ipynb)
+<p align="center">
+    <img src='./gifs/WGAN-GP.gif' width="360"\>
 </p>
