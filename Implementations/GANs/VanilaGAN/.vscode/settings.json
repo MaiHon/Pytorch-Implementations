@@ -1,8 +1,0 @@
-{
-    "python.pythonPath": "/Users/honeyeob/python_workspace/Pytorch/bin/python",
-    "python.linting.pylintArgs": [
-        "--extension-pkg-whitelist=numpy",
-        "--extension-pkg-whitelist=torch",
-        "--extension-pkg-whitelist=torch.nn",
-    ]
-}
