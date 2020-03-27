@@ -31,7 +31,7 @@ Implementing Serveral Networks in [**pytorch**](https://pytorch.org) with studyi
 
 #### VanilaGAN
 - Generative Adversarial Network
-- Authors 
+- Authors
   - [Ian J. Goodfellow | Jean Pouget-Abadie | Mehdi Mirza | Bing Xu | David Warde-Farley | Sherjil Ozair | Aaron Courville | Yoshua Bengio]
   <br></br>
 - [[**Paper**]](https://arxiv.org/abs/1406.2661) | [[**Code**]](./VanilaGAN/VanilaGAN.ipynb)
@@ -77,7 +77,7 @@ Implementing Serveral Networks in [**pytorch**](https://pytorch.org) with studyi
 
 - The original GAN can only map one distribution to one output. <font color='green' size="4"> **So, the authors introduced that conditional GAN; Conditional probabilistic generative model.**</font> Concatenate condition Y to Disctribution X and Z.
 
-- [[**Paper**]](https://arxiv.org/abs/1411.1784) | [[**Code**]](./Implementations/GANs/cGAN/cGAN.ipynb)
+- [[**Paper**]](https://arxiv.org/abs/1411.1784) | [[**Code**]](./cGAN/cGAN.ipynb)
 
 <p align="center">
     <p align="center">

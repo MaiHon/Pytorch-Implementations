@@ -17,13 +17,14 @@ Implementing Serveral Networks in [**pytorch**](https://pytorch.org) with studyi
 
 
 ## Implementations
-+ [GANs]('./Implementations/GANs')
-    + [VanilaGAN]('./Implementations/GANs/VanilaGAN')
-    + [cGAN]('./Implementations/GANs/cGAN')
-    + [DCGAN]('./Implementations/GANs/DCGAN')
-    + [LSGAN]('./Implementations/GANs/LSGAN')
-    + [SRGAN]('./Implementations/GANs/SRGAN')
-    + [WGAN]('./Implementations/GANs/WGAN')
-    + [WGAN-GP]('./Implementations/GANs/WGAN-GP')
++ [GANs](./Implementations/GANs)
+    + [VanilaGAN](./Implementations/GANs/VanilaGAN)
+    + [cGAN](./Implementations/GANs/cGAN)
+    + [DCGAN](./Implementations/GANs/DCGAN)
+    + [LSGAN](./Implementations/GANs/LSGAN)
+    + [SRGAN](./Implementations/GANs/SRGAN)
+    + [WGAN](./Implementations/GANs/WGAN)
+    + [WGAN-GP](./Implementations/GANs/WGAN-GP)
 
-+ [VGG]('./Implementations/VGG')
++ [VGG](./Implementations/VGG/)
++ [ResNet](./Implementations/ResNet)

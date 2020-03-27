@@ -1,6 +1,5 @@
 import torch
 import torch.nn as nn
-import torch.nn.functional as F
 
 
 # Define Activation Function
@@ -52,11 +51,11 @@ class VGG(nn.Module):
                 blocks.append(b)
             c += 1
 
-        self.conv = nn.Sequential(
+        self.feature = nn.Sequential(
             *blocks
         )
         self.avgpool = nn.AdaptiveAvgPool2d(output_size=(7, 7))
-        self.fc = nn.Sequential(
+        self.classifier = nn.Sequential(
             nn.Flatten(),
             nn.Linear(7 * 7 * 512, 4096),
             nn.ReLU(True),
@@ -68,9 +67,9 @@ class VGG(nn.Module):
         )
 
     def forward(self, x):
-        x = self.conv(x)
+        x = self.feature(x)
         x = self.avgpool(x)
-        x = self.fc(x)
+        x = self.classifier(x)
 
         return x
 
@@ -89,3 +88,15 @@ def vgg16_bn(in_c, n_cls):
 
 def vgg19_bn(in_c, n_cls):
     return VGG(in_c, n_cls, [2, 2, 4, 4, 4], _bn=True)
+
+
+if __name__ == "__main__":
+    from torchsummaryM import summary
+    from torchvision.models import vgg
+
+    official_model = vgg.vgg16()
+    test_model = vgg16(3, 1000)
+
+    inps = torch.zeros(1, 3, 224, 224)
+    summary(official_model, inps)
+    summary(test_model, inps)
