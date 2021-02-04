@@ -31,3 +31,5 @@ Implementing Serveral Networks in [**pytorch**](https://pytorch.org) with studyi
 + [MobileNet](./Implementations/MobileNet)
   + [Version 1](./Implementations/MobileNet/V1)
   + [Version 2](./Implementations/MobileNet/V2)
+
++ [DenseNet](./Implementations/DenseNet)
