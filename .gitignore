@@ -144,5 +144,8 @@ modules.xml
 # Sonarlint plugin
 .idea/sonarlint
 
+*/*/__pycache__
+*/data
+
 # End of https://www.gitignore.io/api/macos,jupyternotebooks,visualstudiocode
 
